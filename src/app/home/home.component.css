@@ -1,0 +1,71 @@
+.intro {
+	position: relative;
+	height: 100vh;
+	background: url(https://i.pinimg.com/originals/96/b1/cc/96b1ccf9ff31834057002206b55731c4.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50%;
+}
+button {
+	display: inline-block;
+}
+.primerBtn {
+	margin-top: 20% !important;
+	font-size: 3rem;
+}
+
+.heroHome {
+	background-color: #ff000d;
+	color: rgba(255, 255, 255, 0.829);
+}
+.opcionesHead:hover {
+	background-color: #e50914;
+	cursor: pointer;
+}
+.separador {
+	background-color: #222;
+	height: 15px;
+}
+#primerInfo {
+	background-color: blue;
+	display: none;
+}
+#segundoInfo {
+	background-color: green;
+	display: none;
+}
+#tercerInfo {
+	background-color: tomato;
+	display: none;
+}
+.info {
+	display: block !important;
+	font-size: 20px;
+}
+#nosotros {
+	text-align: center;
+	background-color: #222;
+	color: white;
+	font-size: 2.5rem;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin: 10px 0 30px 0;
+}
+.pie {
+	background-color: black;
+	padding: 15px 0;
+	text-align: center;
+}
+.fab {
+	font-size: 2em;
+	margin-left: 2%;
+	color: white;
+}
+.fab:hover {
+	color: #ff000d;
+}
+.copyright {
+	position: absolute;
+	left: 15px;
+	color: white;
+}

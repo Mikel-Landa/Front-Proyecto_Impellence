@@ -1,0 +1,136 @@
+.wrapper {
+	min-height: 100vh;
+	height: 100%;
+	background-image: url('http://thepatternlibrary.com/img/f.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50%;
+}
+.inner-text {
+	color: white;
+}
+
+/* .toggle {
+	position: fixed;
+	top: 20px;
+	left: 0;
+}
+.fa-bars {
+	display: block;
+	width: 50px;
+	font-size: 30px;
+	margin-top: 15px;
+	padding: 10px;
+	background-color: black;
+	color: white;
+	position: fixed;
+}
+.fa-bars:hover {
+	cursor: pointer;
+}
+aside {
+	background-color: black;
+	width: 200px;
+	position: fixed;
+	top: 85px;
+	z-index: 1000;
+}
+aside a {
+	display: block;
+	text-decoration: none;
+	color: white;
+	padding-left: 10px;
+	font-size: 25px;
+}
+aside a:hover {
+	cursor: pointer;
+	color: white;
+}
+.stats {
+	display: flex;
+	margin-left: 5%;
+}
+.tabla1 {
+	display: block;
+	width: 600px;
+	height: auto;
+}
+.tabla-grande {
+	margin: 0 auto;
+}
+.tabla2 {
+	display: block;
+	width: 800px;
+	height: auto;
+}
+
+@media (max-width: 1100px) {
+	.stats {
+		display: block;
+		margin-left: 10%;
+	}
+	.tabla1 {
+		width: 800px;
+	}
+}
+@media (max-width: 997px) {
+	.stats {
+		margin-left: 50px;
+	}
+}
+@media (max-width: 850px) {
+	.stats {
+		margin-left: 40px;
+	}
+	.tabla1,
+	.tabla2 {
+		width: 700px;
+	}
+}
+@media (max-width: 780px) {
+	.stats {
+		margin-left: 40px;
+	}
+	.tabla1,
+	.tabla2 {
+		width: 600px;
+	}
+}
+@media (max-width: 664px) {
+	.stats {
+		margin-left: 2%;
+	}
+	.tabla1,
+	.tabla2 {
+		width: 500px;
+	}
+}
+@media (max-width: 532px) {
+	.stats {
+		margin-left: 0;
+	}
+	.tabla1,
+	.tabla2 {
+		width: 450px;
+	}
+}
+@media (max-width: 474px) {
+	.stats {
+		margin: 0;
+	}
+	.tabla1,
+	.tabla2 {
+		width: 330px;
+		margin: 0 auto;
+	}
+}
+@media (max-width: 362px) {
+	.stats {
+		margin: 0;
+	}
+	.tabla1,
+	.tabla2 {
+		width: 300px;
+		margin: 0;
+	}
+} */

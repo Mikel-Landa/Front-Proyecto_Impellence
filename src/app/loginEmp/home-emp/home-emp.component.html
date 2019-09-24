@@ -1,0 +1,90 @@
+<div class="wrapper">
+<div class="toggle"><i class="fas fa-bars" (click)="toggleMenu()" ></i>
+    <aside [style.display]="disp" style="z-index: 10000">
+        <a [routerLink]="[currentRoute,'home']"><i class="fas fa-home"> Inicio</i></a>
+        <a [routerLink]="[currentRoute,'stats']"><i class="fas fa-chart-pie"> Estadísticas</i></a>
+        <a [routerLink]="[currentRoute,'calendar']"><i class="fas  fa-calendar "> Calendario</i></a>
+        <a [routerLink]="['/']" (click)="onClick()"><i class="fas fa-sign-out-alt"> Log out</i></a>
+    </aside>
+</div>
+
+<br><br>
+    <div class="container mt-5">
+        <button  (click)="toggleInfo(1)" class="button-display text-center btn btn-block btn-primary py-3 mt-5" ç>Tu empresa tiene <span>{{numeroEmpleados}}</span> empleados</button>
+        
+        <div  [style.display]="disp1" class="info">
+            <table class="table mt-3">
+                <thead>
+                    <th>Nombre</th>
+                    <th class="middle">Email</th>
+                    <th>Ultima acción</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of arrAll">
+                        <td>
+                            {{user.username}}
+                        </td>
+                        <td class="middle">
+                            {{user.email}}
+                        </td>
+                        <td>
+                            {{user.lastSeen}}
+                        </td>
+                     
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+        <button (click)="toggleInfo(2)" class="button-display text-center btn btn-block btn-success py-3 mt-5" >Empleados activos actualmente: <span>{{activeUsers}}</span></button>
+        <div class="info"  [style.display]="disp2">
+            <table class="table mt-3">
+                <thead>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Ultima acción</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of arrActive">
+                        <td>
+                            {{user.username}}
+                        </td>
+                        <td>
+                            {{user.email}}
+                        </td>
+                        <td>
+                            {{user.lastSeen}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+        
+        <button (click)="toggleInfo(3)" class="button-display text-center btn btn-block btn-warning py-3 mt-5" >Empleados en pausa o inactivos: <span>{{numeroEmpleados - activeUsers}}</span> </button>
+        <div class="info"  [style.display]="disp3">
+            <table class="table mt-3">
+                <thead>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Ultima acción</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of arrInactive">
+                        <td>
+                            {{user.username}}
+                        </td>
+                        <td>
+                            {{user.email}}
+                        </td>
+                        <td>
+                            {{user.lastSeen}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+    </div>
+    
+</div>

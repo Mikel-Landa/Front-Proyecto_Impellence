@@ -1,0 +1,29 @@
+span {
+	color: #dc3545;
+}
+.info {
+	max-width: 90%;
+	margin: 0 auto;
+}
+.wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-image: url('http://www.allwhitebackground.com/images/2/2281.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50%;
+}
+.button-display {
+	font-size: 2rem;
+}
+@media (max-width: 475px) {
+	.button-display {
+		font-size: 1.5rem;
+	}
+	.middle {
+		display: none;
+	}
+}

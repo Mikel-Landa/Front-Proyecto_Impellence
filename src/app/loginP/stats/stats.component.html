@@ -1,0 +1,72 @@
+<div class="wrapper">
+    <div class="toggle"><i class="fas fa-bars" (click)="toggleMenu()" ></i>
+        <aside [style.display]="disp" style="z-index: 10000">
+            <a [routerLink]="[currentRoute,'home']"><i class="fas fa-home"> Inicio</i></a>
+            <a [routerLink]="[currentRoute,'stats']"><i class="fas fa-chart-pie"> Estadísticas</i></a>
+            <a [routerLink]="[currentRoute,'calendar']"><i class="fas  fa-calendar "> Calendario</i></a>
+            <a [routerLink]="['/']" (click)="onClick()"><i class="fas fa-sign-out-alt"> Log out</i></a>
+        </aside>
+    </div>
+    <br>
+    
+    <div class="container-fluid">
+        <div class="stats"  *ngIf="barChartData.length!=0">
+            <div >
+                <p class="inner-text">Mes actual</p>
+                <div class="tabla1" >
+                    
+                    <canvas baseChart
+                    [datasets]="barChartData"
+                    [labels]="barChartLabels"
+                    [options]="barChartOptions"
+                    [legend]="barChartLegend"
+                    [chartType]="barChartType"> 
+                </canvas>
+            </div>
+            
+        </div>
+        <div>
+            <p class="inner-text">Mes actual</p>
+            <div class="tabla1" >
+                <canvas baseChart
+                [datasets]="barChartData1"
+                [labels]="barChartLabels1"
+                [options]="barChartOptions"
+                [legend]="barChartLegend1"
+                [chartType]="barChartType1">
+            </canvas>
+        </div>
+    </div>
+</div>
+<br>
+<div class="stats" *ngIf="barChartData3.length!=0">
+    <div > 
+        <p class="inner-text">Año actual (empresa)</p>
+        <div class="tabla1">
+            <canvas baseChart
+            [datasets]="barChartData3"
+            [labels]="barChartLabels3"
+            [options]="barChartOptions"
+            [legend]="barChartLegend3"
+            [chartType]="barChartType3">
+        </canvas>
+    </div>
+    
+</div>
+<div>
+    <p class="inner-text">Año actual (empresa)</p>
+    <div class="tabla1">
+        <canvas baseChart
+        [datasets]="barChartData4"
+        [labels]="barChartLabels4"
+        [options]="barChartOptions"
+        [legend]="barChartLegend4"
+        [chartType]="barChartType4">
+    </canvas>
+</div>
+</div>
+
+
+</div>
+</div>
+</div>

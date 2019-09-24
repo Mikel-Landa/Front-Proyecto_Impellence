@@ -1,0 +1,172 @@
+/* You can add global styles to this file, and also import other style files */
+div {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+.cabecera {
+	position: absolute;
+	top: 0%;
+	left: 0;
+	z-index: 100;
+	background-color: #1260a0b9;
+	color: white;
+	width: 100%;
+}
+.cabecera a {
+	text-decoration: none;
+	color: white;
+	float: right;
+	font-size: 1.5em;
+	height: 81px;
+	padding: 15px 1%;
+}
+.cabecera a:hover {
+	background-color: #072f5f;
+}
+/* login business */
+.cabecera2 {
+	position: absolute;
+	top: 0%;
+	left: 0;
+	z-index: 100;
+	background-color: #a01212b9;
+	color: white;
+	width: 100%;
+}
+.cabecera2 a {
+	text-decoration: none;
+	color: white;
+	float: right;
+	font-size: 1.5em;
+	height: 81px;
+	padding: 15px 1%;
+}
+.cabecera2 a:hover {
+	background-color: #5f0707;
+}
+.toggle {
+	position: fixed;
+	top: 15px;
+	left: 10px;
+}
+.fa-bars {
+	display: block;
+	width: 50px;
+	font-size: 30px;
+	margin-top: 15px;
+	padding: 10px;
+	background-color: black;
+	color: white;
+	position: fixed;
+	text-align: center;
+}
+.fa-bars:hover {
+	cursor: pointer;
+}
+aside {
+	background-color: black;
+	width: 200px;
+	position: fixed;
+	top: 80px;
+	z-index: 1000;
+}
+aside a {
+	display: block;
+	text-decoration: none;
+	color: white;
+	padding-left: 10px;
+	font-size: 25px;
+}
+aside a:hover {
+	cursor: pointer;
+	color: white;
+}
+.stats {
+	display: flex;
+	margin-left: 5%;
+}
+.tabla1 {
+	display: block;
+	width: 600px;
+	height: auto;
+}
+.tabla-grande {
+	margin: 0 auto;
+}
+.tabla2 {
+	display: block;
+	width: 800px;
+	height: auto;
+}
+
+@media (max-width: 1100px) {
+	.stats {
+		display: block;
+		margin-left: 10%;
+	}
+	.tabla1 {
+		width: 800px;
+	}
+}
+@media (max-width: 997px) {
+	.stats {
+		margin-left: 50px;
+	}
+}
+@media (max-width: 850px) {
+	.stats {
+		margin-left: 40px;
+	}
+	.tabla1,
+	.tabla2 {
+		width: 700px;
+	}
+}
+@media (max-width: 780px) {
+	.stats {
+		margin-left: 40px;
+	}
+	.tabla1,
+	.tabla2 {
+		width: 600px;
+	}
+}
+@media (max-width: 664px) {
+	.stats {
+		margin-left: 2%;
+	}
+	.tabla1,
+	.tabla2 {
+		width: 500px;
+	}
+}
+@media (max-width: 532px) {
+	.stats {
+		margin-left: 0;
+	}
+	.tabla1,
+	.tabla2 {
+		width: 450px;
+	}
+}
+@media (max-width: 474px) {
+	.stats {
+		margin: 0;
+	}
+	.tabla1,
+	.tabla2 {
+		width: 330px;
+		margin: 0 auto;
+	}
+}
+@media (max-width: 362px) {
+	.stats {
+		margin: 0;
+	}
+	.tabla1,
+	.tabla2 {
+		width: 300px;
+		margin: 0;
+	}
+}

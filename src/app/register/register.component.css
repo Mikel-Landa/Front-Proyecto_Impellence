@@ -1,0 +1,14 @@
+.wrapper {
+	margin-top: 115px;
+}
+.wrapper2 {
+	height: 100vh;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	background-image: url('https://wallpaperplay.com/walls/full/d/0/d/70300.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50%;
+}

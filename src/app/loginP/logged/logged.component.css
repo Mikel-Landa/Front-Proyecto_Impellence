@@ -1,0 +1,87 @@
+/* aside
+.toggle {
+	position: relative;
+	float: left;
+}
+.fa-bars {
+	display: block;
+	width: 50px;
+	font-size: 30px;
+	margin-top: 15px;
+	padding: 10px;
+	background-color: black;
+	color: white;
+	position: fixed;
+}
+.fa-bars:hover {
+	cursor: pointer;
+}
+aside {
+	background-color: black;
+	width: 200px;
+	position: fixed;
+	top: 60px;
+	z-index: 1000;
+}
+aside a {
+	display: block;
+	text-decoration: none;
+	color: white;
+	padding-left: 10px;
+	font-size: 25px;
+}
+aside a:hover {
+	cursor: pointer;
+	color: white;
+} */
+
+/* princiapal home */
+.contenedor {
+	max-width: 900px;
+	margin: 0 auto;
+}
+.wrapper {
+	height: 100vh;
+	background-image: url('https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-04.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50%;
+}
+button {
+	font-weight: bold;
+	font-size: 1.5rem;
+	position: relative;
+}
+button i {
+	position: absolute;
+	font-size: 1.5em;
+	top: 17px;
+	left: 37%;
+}
+@media (max-width: 785px) {
+	button i {
+		left: 33%;
+	}
+}
+@media (max-width: 785px) {
+	button i {
+		left: 33%;
+	}
+}
+@media (max-width: 450px) {
+	button i {
+		margin: 0 auto;
+		left: 45%;
+	}
+	button span {
+		visibility: hidden;
+	}
+}
+.contador {
+	font-size: 3rem;
+	max-width: 900px;
+	margin: 0 auto;
+	text-align: center;
+	height: 6rem;
+	font-weight: bold;
+}

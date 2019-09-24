@@ -1,0 +1,57 @@
+<div class="toggle"><i class="fas fa-bars" (click)="toggleMenu()" ></i>
+    <aside [style.display]="disp" style="z-index: 10000">
+        <a [routerLink]="[currentRoute,'home']"><i class="fas fa-home"> Inicio</i></a>
+        <a [routerLink]="[currentRoute,'stats']"><i class="fas fa-chart-pie"> Estadísticas</i></a>
+        <a [routerLink]="[currentRoute,'calendar']"><i class="fas  fa-calendar "> Calendario</i></a>
+        <a [routerLink]="['/']" (click)="onClick()"><i class="fas fa-sign-out-alt"> Log out</i></a>
+    </aside>
+</div>
+
+<div class="wrapper pt-5">
+    <div class="calendar-container ">
+        <div class="calendar-header">
+            <h1>
+                
+                <div class="dropdown" (click)="onMonthClick()">
+                    {{month}}
+                    <button >▾</button> 
+                    <div class="menu-mes">
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"[style.display]="displ" >
+                            <a (click)="manageSelect(i)" *ngFor="let mes of arrMonths; let i =index" class="dropdown-item" >{{mes}}</a>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </h1>
+            <p>{{year}}</p>
+        </div>
+        <div class="head">
+            <div class="day-name">Mon</div><div class="day-name">Tue</div><div class="day-name">Wed</div><div class="day-name">Thu</div><div class="day-name">Fri</div><div class="day-name">Sat</div><div class="day-name">Sun</div>
+        </div>
+        <div class="all-days">
+            <div  *ngFor="let diaPrevio of arrMesAnterior" class="day day--disabled" >
+                {{diaPrevio}}
+            </div>
+            <div [ngClass]="{rojo:pintarVacaciones(dia)}" *ngFor="let dia of daysOfMonth(selectedMonth)" (click)="onDayClick(dia)"  class="day">
+                {{dia}}
+            </div> 
+            
+            <div  *ngFor="let diaSiguiente of arrMesPosterior" class="day day--disabled" >
+                {{diaSiguiente}}
+            </div>
+            
+        </div>
+        
+    </div>
+    <form class="mt-4 calendar-container" #formulario="ngForm" (ngSubmit)="clickDate(formulario.value)">
+        <div class="form-group row">
+            <label for="inputPassword"style="color:white" class="ml-5 col-sm-11 col-form-label">Fecha de vacaciones</label>
+            
+            <div class="col-sm-11 mx-5" >
+                <input required type="date" class="form-control" name="vacacion" ngModel >
+            </div>
+        </div>
+        <button [disabled]="formulario.invalid" type="submit" class=" offset-sm-10 col-sm-2 btn btn-danger boton ">Enviar</button>
+    </form>
+</div>  

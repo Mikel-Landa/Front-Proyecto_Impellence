@@ -1,0 +1,34 @@
+<header class="cabecera2">
+    <nav class="container" >
+        <a [routerLink]="'/business/login'">Empresa</a>
+        <a [routerLink]="['/login']">Login</a>  
+        <a [routerLink]="['/']">Inicio</a>
+    </nav>
+    
+</header>
+<div class="wrapper ">
+    <div class="container login-container">
+        <div class="col-md-6 login-form-2">
+            <h3>Login</h3>
+            <form #formulario="ngForm" (ngSubmit)="onSubmit(formulario.value)" novalidate>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Usuario" name="username" ngModel>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Contraseña" name="password" ngModel >
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btnSubmit" value="Login" />
+                </div>
+                <div class="form-group">
+                    
+                    <a href="#" class="ForgetPwd" value="Login">¿Olvidaste la contraseña?</a>
+                    <br>
+                    <a routerLink="/business/register" class="register" value="Login">¿Todavía no tienes cuenta? <span>¡Regístrate!</span></a>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</div>
+

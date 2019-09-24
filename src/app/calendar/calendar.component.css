@@ -1,0 +1,232 @@
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background: #ce8d62af;
+	padding: 40px 0;
+	box-sizing: border-box;
+	font-family: Montserrat, "sans-serif";
+	color: #51565d;
+}
+.wrapper {
+	height: 100vh;
+	background-image: url('https://i.imgur.com/QVFUaZP.jpg?1');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50%;
+}
+.toggle {
+	position: fixed;
+	z-index: 1000;
+}
+
+.calendar-container {
+	width: 90%;
+	margin: auto;
+
+	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	background: #c87e4dce;
+	max-width: 1200px;
+}
+.rojo {
+	background-color: #f8254e !important;
+}
+.head {
+	width: 100%;
+	display: flex;
+	flex-wrap: nowrap;
+}
+.calendar-header {
+	text-align: center;
+	padding: 20px 0;
+	background: linear-gradient(to bottom, #fafbfd 0%, rgba(255, 255, 255, 0) 100%);
+	border-bottom: 1px solid rgba(166, 168, 179, 0.12);
+}
+.dropdown {
+	cursor: pointer;
+}
+.dropdown-menu {
+	float: none;
+	margin: 0%;
+
+	width: 10%;
+	margin: 0 auto;
+	position: relative;
+	background-color: rgb(124, 110, 73);
+	border: none;
+}
+.menu-mes {
+	margin-top: 1.2em;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.calendar-header h1 {
+	margin: 0;
+	font-size: 18px;
+	font-weight: bold;
+}
+.calendar-header p {
+	margin: 5px 0 0 0;
+	font-size: 13px;
+	font-weight: 600;
+}
+.calendar-header button {
+	background: 0;
+	border: 0;
+	padding: 0;
+	color: rgba(81, 86, 93, 0.7);
+	cursor: pointer;
+	outline: 0;
+}
+.all-days {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.btn-danger {
+	font-size: 1.5rem;
+}
+
+.day {
+	border-bottom: 1px solid rgba(166, 168, 179, 0.12);
+	border-right: 1px solid rgba(166, 168, 179, 0.12);
+	text-align: right;
+	padding: 14px 20px;
+	letter-spacing: 1px;
+	font-size: 12px;
+	box-sizing: border-box;
+	color: white;
+	position: relative;
+	z-index: 1;
+	width: 14.28571428571429%;
+}
+.day:hover {
+	background-color: rgba(128, 128, 128, 0.582);
+	cursor: pointer;
+}
+sup {
+	color: yellow;
+	font-weight: 700;
+}
+
+.day-name {
+	font-size: 12px;
+	text-transform: uppercase;
+	color: rgba(116, 199, 38, 0.993);
+	text-align: center;
+	border-bottom: 1px solid rgba(166, 168, 179, 0.12);
+	border-right: 1px solid rgba(166, 168, 179, 0.12);
+	line-height: 50px;
+	font-weight: 700;
+	width: 100%;
+}
+.day--disabled {
+	color: rgb(0, 0, 0);
+	background-color: rgb(127, 128, 134);
+	/* background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f9f9fa' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E"); */
+	cursor: default !important;
+	font-weight: 600;
+}
+.day--disabled:hover {
+	background-color: rgb(127, 128, 134);
+}
+
+/* .task {
+	border-left-width: 3px;
+	padding: 8px 12px;
+	margin: 10px;
+	border-left-style: solid;
+	font-size: 14px;
+	position: relative;
+}
+.task--warning {
+	border-left-color: #fdb44d;
+	grid-column: 4 / span 3;
+	grid-row: 3;
+	background: #fef0db;
+	align-self: center;
+	color: #fc9b10;
+	margin-top: -5px;
+}
+.task--danger {
+	border-left-color: #fa607e;
+	grid-column: 2 / span 3;
+	grid-row: 3;
+	margin-top: 15px;
+	background: rgba(253, 197, 208, 0.7);
+	align-self: end;
+	color: #f8254e;
+}
+.task--info {
+	border-left-color: #4786ff;
+	grid-column: 6 / span 2;
+	grid-row: 5;
+	margin-top: 15px;
+	background: rgba(218, 231, 255, 0.7);
+	align-self: end;
+	color: #0a5eff;
+}
+.task--primary {
+	background: #4786ff;
+	border: 0;
+	border-radius: 4px;
+	grid-column: 3 / span 3;
+	grid-row: 4;
+	align-self: end;
+	color: #fff;
+	box-shadow: 0 10px 14px rgba(71, 134, 255, 0.4);
+}
+.task__detail {
+	position: absolute;
+	left: 0;
+	top: calc(100% + 10px);
+	background: #fff;
+	border: 1px solid rgba(166, 168, 179, 0.2);
+	color: #000;
+	padding: 20px;
+	box-sizing: border-box;
+	border-radius: 4px;
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+	z-index: 2;
+}
+.task__detail:after,
+.task__detail:before {
+	bottom: 100%;
+	left: 30%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.task__detail:before {
+	border-bottom-color: rgba(166, 168, 179, 0.2);
+	border-width: 8px;
+	margin-left: -8px;
+}
+.task__detail:after {
+	border-bottom-color: #fff;
+	border-width: 6px;
+	margin-left: -6px;
+}
+.task__detail h2 {
+	font-size: 15px;
+	margin: 0;
+	color: #51565d;
+}
+.task__detail p {
+	margin-top: 4px;
+	font-size: 12px;
+	margin-bottom: 0;
+	font-weight: 500;
+	color: rgba(81, 86, 93, 0.7);
+}
+ */

@@ -1,0 +1,22 @@
+
+<div class="toggle"><i class="fas fa-bars" (click)="toggleMenu()" ></i>
+<aside [style.display]="disp" style="z-index: 10000">
+    <a [routerLink]="[currentRoute,'home']"><i class="fas fa-home"> Inicio</i></a>
+    <a [routerLink]="[currentRoute,'stats']"><i class="fas fa-chart-pie"> Estadísticas</i></a>
+    <a [routerLink]="[currentRoute,'calendar']"><i class="fas  fa-calendar "> Calendario</i></a>
+    <a [routerLink]="['/']" (click)="onClick()"><i class="fas fa-sign-out-alt"> Log out</i></a>
+    
+</aside>
+</div>
+<div class="wrapper">
+    <div class="contador">
+        {{dispContador}}
+    </div>
+    <div class="contenedor">
+        <button class="btn btn-success btn-block py-3 mt-4 " (click)="empezarContador()"><i class="fas fa-sign-in-alt"></i><span> ENTRADA</span></button>
+        <button class="btn btn-warning btn-block py-3 mt-4 " (click)="pausarContador()"><i class="fas fa-pause"></i><span> PAUSAR</span></button>
+        <button class="btn btn-primary btn-block py-3 mt-4 "(click)="reanudarContador()"><i class="fas fa-redo-alt"></i><span> VOLVER</span></button>
+        <button class="btn btn-danger btn-block py-3  mt-4" (click)="finalizarContador()"><i class="fas fa-stop-circle"></i><span> FINALIZAR</span></button>
+    </div>
+    
+</div>
